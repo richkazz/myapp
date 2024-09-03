@@ -40,29 +40,37 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              TextFormField(
-                decoration: const InputDecoration(
-                    labelText: 'Ordinary Text Field',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                    )),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              TextFormField(
-                decoration: InputDecoration(
-                  labelText: 'Text Field with IconButton',
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  suffixIcon: IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.remove_red_eye)),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  width: 200,
+                  height: 300,
+                  color: Colors.amber,
                 ),
-              ),
-            ],
+                TextFormField(
+                  decoration: const InputDecoration(
+                      labelText: 'Ordinary Text Field',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      )),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Text Field with IconButton',
+                    border: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.remove_red_eye)),
+                  ),
+                ),
+              ],
+            ),
           ),
         ));
   }
