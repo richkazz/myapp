@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SemanticsBinding.instance.ensureSemantics();
   runApp(const MyApp());
 }
 
@@ -67,6 +70,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     suffixIcon: IconButton(
                         onPressed: () {},
                         icon: const Icon(Icons.remove_red_eye)),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: 'Text Field with IconButton',
+                    errorText: 'Some error',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
                   ),
                 ),
               ],
